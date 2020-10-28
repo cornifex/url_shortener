@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * UR Url Shortener module file.
+ */
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function ut_url_shortener_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  if ($node->bundle() === 'shortened_url') {
+    $url = $node->get('field_short_url')->uri;
+    $qr_code_url = 'https://chart.googleapis.com/chart?chs=300x300&cht=qr&choe=UTF-8&chl=';
+    $qr_code_url .= urlencode($url);
+    $variables['content']['qr_code'] = [
+      '#markup' => '<img src=' . $qr_code_url . ' />',
+      '#weight' => 200,
+    ];
+  }
+}

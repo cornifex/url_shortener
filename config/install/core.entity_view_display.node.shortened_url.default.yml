@@ -1,0 +1,46 @@
+uuid: 8f8592ed-059c-4f8e-87c0-f6311ae3ccc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.shortened_url.field_original_url
+    - field.field.node.shortened_url.field_short_url
+    - node.type.shortened_url
+  module:
+    - link
+    - user
+id: node.shortened_url.default
+targetEntityType: node
+bundle: shortened_url
+mode: default
+content:
+  field_original_url:
+    weight: 101
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_short_url:
+    weight: 102
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

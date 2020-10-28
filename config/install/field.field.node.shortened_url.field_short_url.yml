@@ -1,0 +1,23 @@
+uuid: 2b4efa17-9895-4908-8858-f67b0d38b932
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_short_url
+    - node.type.shortened_url
+  module:
+    - link
+id: node.shortened_url.field_short_url
+field_name: field_short_url
+entity_type: node
+bundle: shortened_url
+label: 'Short URL'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 0
+field_type: link

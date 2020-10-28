@@ -1,0 +1,24 @@
+uuid: ab7c78d6-f754-40dd-a55e-d0959b1796b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.shortened_url.field_original_url
+    - field.field.node.shortened_url.field_short_url
+    - node.type.shortened_url
+  module:
+    - user
+id: node.shortened_url.teaser
+targetEntityType: node
+bundle: shortened_url
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_original_url: true
+  field_short_url: true

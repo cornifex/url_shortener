@@ -1,0 +1,22 @@
+uuid: ea179876-4aa3-45cf-a612-8798fe8a31df
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: shortened_url
+label: 'Shortened URL'
+type: 'canonical_entities:node'
+pattern: 'view/[node:title]'
+selection_criteria:
+  84c31cb5-7f96-4679-8696-c46396876485:
+    id: node_type
+    bundles:
+      shortened_url: shortened_url
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 84c31cb5-7f96-4679-8696-c46396876485
+selection_logic: and
+weight: -5
+relationships: {  }

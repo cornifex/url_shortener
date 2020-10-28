@@ -1,0 +1,7 @@
+name: 'UT Url Shortener'
+type: module
+description: 'Provides functionality for shortening URLs.'
+core_version_requirement: ^8.9
+package: 'UT'
+dependencies:
+  - drupal:pathauto
