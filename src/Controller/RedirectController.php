@@ -5,6 +5,7 @@ namespace Drupal\ut_url_shortener\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Routing\TrustedRedirectResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -61,7 +62,7 @@ class RedirectController extends ControllerBase {
     else {
       $node = reset($nodes);
       $url = $node->get('field_original_url')->uri;
-      return new RedirectResponse($url);
+      return new TrustedRedirectResponse($url);
     }
   }
 
