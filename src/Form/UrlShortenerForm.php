@@ -92,7 +92,7 @@ class UrlShortenerForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $url = $form_state->getValue('url');
-    $shortcode = $this->shortCodeGenerator->generate(10);
+    $shortcode = $this->shortCodeGenerator->generate(9);
     $short_url = Url::fromUserInput('/r/' . $shortcode, ['absolute' => TRUE]);
     $node_storage = $this->entityTypeManager->getStorage('node');
     $node = $node_storage->create(['type' => 'shortened_url']);
