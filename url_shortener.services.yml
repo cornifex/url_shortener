@@ -1,0 +1,4 @@
+services:
+  url_shortener.generator:
+    class: Drupal\url_shortener\Generator
+    arguments: ['@entity_type.manager']

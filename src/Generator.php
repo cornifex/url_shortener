@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ut_url_shortener;
+namespace Drupal\url_shortener;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 

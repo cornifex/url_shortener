@@ -1,6 +1,0 @@
-ut_url_shortener.redirect:
-    path: /r/{shortcode}
-    defaults:
-      _controller: \Drupal\ut_url_shortener\Controller\RedirectController::content
-    requirements:
-      _permission: 'access content'

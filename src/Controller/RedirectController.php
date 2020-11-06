@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ut_url_shortener\Controller;
+namespace Drupal\url_shortener\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityStorageInterface;
@@ -12,7 +12,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 /**
  * Shortlink redirect controller.
  *
- * @package Drupal\ut_url_shortener\Controller
+ * @package Drupal\url_shortener\Controller
  */
 class RedirectController extends ControllerBase {
 

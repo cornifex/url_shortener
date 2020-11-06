@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ut_url_shortener\Form;
+namespace Drupal\url_shortener\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -28,9 +28,9 @@ class UrlShortenerForm extends FormBase {
   protected $httpClient;
 
   /**
-   * Drupal\ut_url_shortener\Generator definition.
+   * Drupal\url_shortener\Generator definition.
    *
-   * @var \Drupal\ut_url_shortener\Generator
+   * @var \Drupal\url_shortener\Generator
    */
   protected $shortCodeGenerator;
 
@@ -41,7 +41,7 @@ class UrlShortenerForm extends FormBase {
     $instance = parent::create($container);
     $instance->entityTypeManager = $container->get('entity_type.manager');
     $instance->httpClient = $container->get('http_client');
-    $instance->shortCodeGenerator = $container->get('ut_url_shortener.generator');
+    $instance->shortCodeGenerator = $container->get('url_shortener.generator');
     return $instance;
   }
 

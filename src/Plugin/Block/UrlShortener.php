@@ -1,11 +1,11 @@
 <?php
 
-namespace Drupal\ut_url_shortener\Plugin\Block;
+namespace Drupal\url_shortener\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\ut_url_shortener\Form\UrlShortenerForm;
+use Drupal\url_shortener\Form\UrlShortenerForm;
 
 /**
  * Provides a 'UrlShortener' block.
